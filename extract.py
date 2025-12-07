@@ -1,8 +1,15 @@
+import argparse
 import email
 import quopri
 import re
 from pathlib import Path
 import unicodedata
+
+# Arguement Parser
+def parse_arguments():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("eml_file")
+    return parser.parse_args()
 
 def normalize_whitespace(text: str) -> str:
     """Clean and normalize whitespace and Unicode quirks."""
@@ -66,11 +73,17 @@ def parse_grammarly_metrics(text: str) -> dict:
     return metrics
 
 
-# Example usage
-eml_path = Path(r"emails/01.eml")
-decoded_text = load_eml_and_get_plaintext(eml_path)
-metrics = parse_grammarly_metrics(decoded_text)
+# Example Usage
+def main():
+    args = parse_arguments()
 
-print("📊 Grammarly Metrics Extracted:")
-for key, value in metrics.items():
-    print(f"- {key}: {value}")
+    eml_path = Path(args.eml_file)
+    decoded_text = load_eml_and_get_plaintext(eml_path)
+    metrics = parse_grammarly_metrics(decoded_text)
+
+    print("📊 Grammarly Metrics Extracted:")
+    for key, value in metrics.items():
+        print(f"- {key}: {value}")
+
+if __name__ == "__main__":
+    main()
