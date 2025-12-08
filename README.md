@@ -4,7 +4,7 @@ Every week, Grammarly users receive an email highlighting their statistics for t
 
 ## Example Email
 
-![Email from Grammarly](images\grammarly-email-example.png)
+![Email from Grammarly](images/grammarly-email-example.png)
 
 ## Preparing Email Files
 
@@ -12,7 +12,7 @@ Download your weekly Grammarly emails as `.EML` files to the emails folder in th
 
 Example in Outlook Web:
 
-![Outlook Web dialog Download as EML](images\outlook-download-eml.png)
+![Outlook Web dialog Download as EML](images/outlook-download-eml.png)
 
 ## Extract Statistics from a Single Email
 
