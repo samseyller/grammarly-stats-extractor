@@ -41,6 +41,6 @@ Output:
 
 ## Extract All Statistics as a CSV
 
-Run `extract_to_csv.py`
+Run `extract_to_csv.py` to process all `.EML` files in the `.\emails` directory.
 
 Output is saved to `grammarly_metrics.csv`
